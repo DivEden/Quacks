@@ -1,0 +1,5 @@
+format: jb-book
+root: Intro.ipynb
+chapters:
+- file: CongressGov.ipynb
+- file: reklame_grafer.ipynb
