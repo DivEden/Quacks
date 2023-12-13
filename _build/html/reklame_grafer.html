@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'reklame_grafer';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Data Fra Library of Congress" href="CongressGov.html" />
+    <link rel="prev" title="Data fra Library of Congress" href="CongressGov.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,12 +156,12 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="Intro.html">
-                    Introduktion til bilaget
+                    Introduktion til Bilaget
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CongressGov.html">Data Fra Library of Congress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CongressGov.html">Data fra Library of Congress</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chicago Tribune</a></li>
 </ul>
 
@@ -309,7 +309,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chicago-tribune-arkivet">Chicago tribune arkivet</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chicago-tribune-arkivet">Chicago Tribune arkivet</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#antal-reklamer-per-ar">Antal reklamer per år</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ugedage">Ugedage</a></li>
 </ul>
@@ -329,9 +329,9 @@ document.write(`
 <h1>Chicago Tribune<a class="headerlink" href="#chicago-tribune" title="Permalink to this heading">#</a></h1>
 <p>Her fremvises grafer og data fra Chicago tribune arkivet.</p>
 <section id="chicago-tribune-arkivet">
-<h2>Chicago tribune arkivet<a class="headerlink" href="#chicago-tribune-arkivet" title="Permalink to this heading">#</a></h2>
+<h2>Chicago Tribune arkivet<a class="headerlink" href="#chicago-tribune-arkivet" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="http://Newspapers.com">Newspapers.com</a> har digitaliseret alle udgaver af chicago tribune, dog kun som billeder og man kan derfor ikke bruge en API til at hente metadataen i avisen. Derfor har vi selv fundet lidt over 3000 reklamer fra avisen og indsat dem i følgene excel dokument:</p>
-<p><a href="./reklame_regneark.xlsx" download="reklame_regneark.xlsx">Download Excel Fil</a></p>
+<p><a href="https://github.com/DivEden/Quacks/blob/e5ce58cf9046a2a8efb6e390004ffcce053ab3e6/reklame_regneark.xlsx" download="https://github.com/DivEden/Quacks/blob/e5ce58cf9046a2a8efb6e390004ffcce053ab3e6/reklame_regneark.xlsx">Download Excel Fil</a></p>
 <p>Da det ville være umuligt at gennemgå alle aviser udgivet i vores undersøgelsesperiode, har vi valgt at fokusere på en bestemt gruppe af aviser. Disse aviser er omhyggeligt udvalgt for at sikre en ligelig fordeling på tværs af ugedage, år og måneder. Dette betyder, at for hvert år i vores undersøgelse har vi inkluderet 12 aviser, én for hver måned. Derefter har vi beregnet en metode til at distribuere ugedagene lige så jævnt som muligt.</p>
 <p>Den følgene kode ligner meget hvad vi allerede har forklaret, og forklaringen på koden vil derfor være minimal.</p>
 <section id="antal-reklamer-per-ar">
@@ -386,8 +386,8 @@ document.write(`
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Weekday&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Average Articles&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Average Number of Articles&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Average Articles for Medicine by Weekday&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Gennemsnitslig Antal Artikler&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gennemsnitslige Antal Reklamer Per Ugedag&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>  <span class="c1"># Invert the y-axis for Monday to appear at the top</span>
 
 <span class="c1"># Display the graph</span>
@@ -396,7 +396,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/390511757fb0d8739d5408dabb85853d127d3b45473f031ae25e0ed0a94b6779.png" src="_images/390511757fb0d8739d5408dabb85853d127d3b45473f031ae25e0ed0a94b6779.png" />
+<img alt="_images/5169eabab9e87c51b3c455624cbb703a754bdb762d9ac39278bbabd3c4ca4ae1.png" src="_images/5169eabab9e87c51b3c455624cbb703a754bdb762d9ac39278bbabd3c4ca4ae1.png" />
 </div>
 </div>
 <p>Dette giver god mening, da både søndags og lørdags udgaverne var betydeligt længere end andre ugedages aviser.</p>
@@ -440,7 +440,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Fra Library of Congress</p>
+        <p class="prev-next-title">Data fra Library of Congress</p>
       </div>
     </a>
 </div>
@@ -458,7 +458,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chicago-tribune-arkivet">Chicago tribune arkivet</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chicago-tribune-arkivet">Chicago Tribune arkivet</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#antal-reklamer-per-ar">Antal reklamer per år</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ugedage">Ugedage</a></li>
 </ul>
